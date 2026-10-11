@@ -1,0 +1,7 @@
+# Arbeitsdateien bleiben lokal
+_werkzeuge/
+_rohmaterial/
+LIESMICH.txt
+Protokolleintrag_*.txt
+intro-vorschau.html
+.DS_Store

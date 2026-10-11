@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="de" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Vorhersage: Vier Farben, eine Vorhersage – AI-Photoguard</title>
+  <meta name="description" content="Aus vier gemessenen Bleichraten eine fünfte vorhersagen: die vier LEDs, ein interaktiver Regler mit Formeln (E = h·c/λ, Lambert-Beer, Halbwertszeit) und unsere Kontrollen." />
+  <meta name="theme-color" content="#07080b" />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/icons/icon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Photoguard" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:site_name" content="AI-Photoguard" />
+  <meta property="og:title" content="Vorhersage: Vier Farben, eine Vorhersage – AI-Photoguard" />
+  <meta property="og:description" content="Aus vier gemessenen Bleichraten eine fünfte vorhersagen: die vier LEDs, ein interaktiver Regler mit Formeln (E = h·c/λ, Lambert-Beer, Halbwertszeit) und unsere Kontrollen." />
+  <meta property="og:image" content="assets/img/teilen-vorhersage.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/video/led-farben-poster.webp" as="image" />
+  <link rel="stylesheet" href="assets/css/site.css?v=6.1" />
+  <link rel="stylesheet" href="assets/css/bausteine.css?v=6.1" />
+  <link rel="stylesheet" href="assets/css/v6-unterseiten.css?v=6.1" />
+  <link rel="stylesheet" href="assets/css/uebergaenge.css?v=6.1" />
+  <script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");["pagereveal","pageswap"].forEach(function(n){addEventListener(n,function(e){var v=e.viewTransition;if(v){[v.ready,v.finished,v.updateCallbackDone].forEach(function(p){if(p&&p.catch)p.catch(function(){});});}});});</script>
+</head>
+<body data-page="vorhersage">
+<div class="page">
+  <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+  <header class="site-header" data-theme="dark">
+    <a class="brand" href="index.html" aria-label="AI-Photoguard – Startseite"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7.4" y="5.2" width="9.2" height="16" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="8.9" y="11" width="6.2" height="8.7" rx=".9" fill="#2A63FF"/><path d="M12 .8v3.4" stroke="#FF4A3D" stroke-width="2" stroke-linecap="round"/></svg><span>AI-Photo<b>guard</b></span></a>
+    <nav class="desk-nav" aria-label="Hauptnavigation"><ul><li><a href="idee.html">Idee</a></li><li><a href="wissen.html">Wissen</a></li><li><a href="messbox.html">Messbox</a></li><li><a href="rundgang.html">Durch die Messbox</a></li><li><a href="vorhersage.html">Vorhersage</a></li><li><a href="anwendungen.html">Anwendungen</a></li><li><a href="forschungsweg.html">Forschungsweg</a></li><li><a href="team.html">Team & Stand</a></li></ul></nav>
+    <button class="film-btn" type="button" data-film><i><svg viewBox="0 0 12 14" aria-hidden="true"><path d="M1 1l10 6-10 6z" fill="currentColor"/></svg></i>Film ansehen</button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="menu-btn__label">Menü</span><span class="menu-btn__icon" aria-hidden="true"><i></i><i></i></span></button>
+    <div class="progress" aria-hidden="true"><span></span></div>
+  </header>
+  <nav class="menu" id="menu" aria-label="Seiten" hidden>
+    <div class="menu__glow" aria-hidden="true"></div>
+    <p class="kicker">AI-Photoguard · Jugend forscht 2027</p>
+    <ol class="menu__list">
+      <li><a href="index.html" style="--i:0"><span class="menu__num">00</span><span class="menu__title">Start</span><span class="menu__time"></span></a></li>
+      <li><a href="idee.html" style="--i:0"><span class="menu__num">01</span><span class="menu__title">Idee</span><span class="menu__time">Warum</span></a></li>
+      <li><a href="wissen.html" style="--i:1"><span class="menu__num">02</span><span class="menu__title">Wissen</span><span class="menu__time">Chemie</span></a></li>
+      <li><a href="messbox.html" style="--i:2"><span class="menu__num">03</span><span class="menu__title">Messbox</span><span class="menu__time">in 3D</span></a></li>
+      <li><a href="rundgang.html" style="--i:3"><span class="menu__num">★</span><span class="menu__title">Durch die Messbox</span><span class="menu__time">Test</span></a></li>
+      <li><a href="vorhersage.html" style="--i:4"><span class="menu__num">04</span><span class="menu__title">Vorhersage</span><span class="menu__time">zum Ausprobieren</span></a></li>
+      <li><a href="anwendungen.html" style="--i:5"><span class="menu__num">05</span><span class="menu__title">Anwendungen</span><span class="menu__time">Nutzen</span></a></li>
+      <li><a href="forschungsweg.html" style="--i:6"><span class="menu__num">06</span><span class="menu__title">Forschungsweg</span><span class="menu__time">seit 2025</span></a></li>
+      <li><a href="team.html" style="--i:7"><span class="menu__num">07</span><span class="menu__title">Team & Stand</span><span class="menu__time">wer & wann</span></a></li>
+    </ol>
+    <div class="menu__foot"><button class="btn" type="button" data-film>Film ansehen <i><svg viewBox="0 0 12 14" aria-hidden="true"><path d="M1 1l10 6-10 6z" fill="currentColor"/></svg></i></button><span>Chemie · FOS Holzkirchen · <a href="quellen.html">Quellen</a></span></div>
+  </nav>
+
+<main id="inhalt">
+    <section class="page-hero" data-theme="dark" aria-labelledby="v-h">
+      <div class="hero__media">
+        <video data-auto data-src-lg="assets/video/led-farben.mp4" poster="assets/video/led-farben-poster.webp" muted playsinline loop preload="none" aria-hidden="true"></video>
+      </div>
+      <div class="chems" aria-hidden="true">
+        <span class="chem chem--red" style="--x:84%; --y:28%; --s:84px" data-depth="0.8">660</span>
+        <span class="chem hide-sm" style="--x:72%; --y:46%; --s:70px; border-color: rgba(255,171,46,.6)" data-depth="0.5">590</span>
+        <span class="chem hide-sm" style="--x:90%; --y:58%; --s:66px; border-color: rgba(34,207,220,.6)" data-depth="0.6">480</span>
+        <span class="chem chem--blue" style="--x:78%; --y:72%; --s:72px" data-depth="0.4">450</span>
+        <span class="chem chem--pink" style="--x:62%; --y:30%; --s:92px" data-depth="1">λ₅ ?</span>
+      </div>
+      <div class="wrap hero__inner">
+        <div class="crumb enter" style="--d: 100ms"><span class="num">04</span><span class="kicker">Vorhersage</span></div>
+        <h1 class="h1 enter" id="v-h" style="--d: 200ms">Vier Farben. Eine Vorhersage.</h1>
+        <p class="lead enter" style="--d: 320ms">Jede Lichtfarbe schluckt Methylenblau unterschiedlich stark – also sollte es auch unterschiedlich schnell ausbleichen. Aus vier gemessenen Farben sagen wir die fünfte voraus.</p>
+        <div class="btns enter" style="--d: 420ms"><a class="btn" href="#ai">Selbst ausprobieren <i aria-hidden="true">↓</i></a></div>
+      </div>
+      <p class="hero__credit">3D-Animation: die vier LED-Module unserer Messbox</p>
+    </section>
+
+    <section class="sec" id="leds" data-theme="dark" aria-labelledby="led-h">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="kicker" data-reveal>Unsere vier LEDs</p>
+          <h2 class="h2" id="led-h" data-reveal>Was wir erwarten</h2>
+          <p class="lead" data-reveal>Jede LED leuchtet in einer bestimmten <button class="term" type="button" popovertarget="g-nm">Wellenlänge</button>. Je mehr davon Methylenblau schluckt, desto schneller sollte es ausbleichen.</p>
+        </header>
+        <div class="leds">
+          <article class="led" data-reveal>
+            <p class="led__nm">660<small>nm</small></p>
+            <h3 class="led__name">Tiefrot</h3>
+            <p>Unser Hauptkanal – direkt am Absorptionsmaximum. Hier erwarten wir das schnellste Ausbleichen.</p>
+            <p class="led__abs">Absorption ≈ 97 % · 1,88 eV</p>
+          </article>
+          <article class="led led--590" data-reveal style="--d: 60ms">
+            <p class="led__nm">590<small>nm</small></p>
+            <h3 class="led__name">Gelb</h3>
+            <p>An der Flanke der Absorptionsbande. Wir erwarten ein mittleres Signal.</p>
+            <p class="led__abs">Absorption ≈ 30 % · 2,10 eV</p>
+          </article>
+          <article class="led led--480" data-reveal style="--d: 120ms">
+            <p class="led__nm">480<small>nm</small></p>
+            <h3 class="led__name">Türkis</h3>
+            <p>Wird kaum geschluckt – Methylenblau lässt dieses Licht größtenteils durch.</p>
+            <p class="led__abs">Absorption ≈ 3 % · 2,58 eV</p>
+          </article>
+          <article class="led led--450" data-reveal style="--d: 180ms">
+            <p class="led__nm">450<small>nm</small></p>
+            <h3 class="led__name">Königsblau</h3>
+            <p>Kaum geschluckt, aber energiereichere Photonen. Spannende Frage: Zählt nur, wie viel Licht geschluckt wird – oder auch die Energie jedes Photons?</p>
+            <p class="led__abs">Absorption ≈ 2 % · 2,76 eV</p>
+          </article>
+        </div>
+        <p class="credit">Absorption relativ zum Maximum bei 664 nm, aus Literaturdaten <a class="ref" href="quellen.html#q18">[18]</a>; Energie pro Photon E = h·c/λ. Erwartungen, keine Messergebnisse.</p>
+      </div>
+    </section>
+
+    <section class="sec rounded-top" id="ai" data-theme="dark" aria-labelledby="ai-h" style="background: var(--night-2); --surface: #18264a; --surface-2: #1f2f5a">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="kicker" data-reveal>Das „AI“ im Namen · zum Ausprobieren</p>
+          <h2 class="h2" id="ai-h" data-reveal>Aus vier Punkten eine Vorhersage</h2>
+          <p class="lead" data-reveal>Aus den vier gemessenen <button class="term" type="button" popovertarget="g-rate">Bleichraten</button> lernt ein <button class="term" type="button" popovertarget="g-reg">Regressionsmodell</button> eine Kurve – und sagt damit die Rate für eine fünfte Wellenlänge λ₅ voraus. Am Regler lässt sich λ₅ verschieben; daneben rechnen die Formeln mit, auf denen unsere Erwartung beruht.</p>
+        </header>
+        <div class="lab" data-reveal>
+          <figure class="lab__fig">
+            <svg class="lab__svg" viewBox="0 0 640 400" role="img" aria-label="Diagramm: Absorption von Methylenblau über der Wellenlänge und die daraus erwartete Bleichrate. Eine Markierung zeigt die gewählte fünfte Wellenlänge.">
+              <defs><linearGradient id="lab-rainbow" x1="0" x2="1"><stop offset="0" stop-color="#7b2ff7"/><stop offset=".12" stop-color="#3b4cff"/><stop offset=".22" stop-color="#1e90ff"/><stop offset=".28" stop-color="#12c6d6"/><stop offset=".35" stop-color="#2fd15a"/><stop offset=".47" stop-color="#a8d92b"/><stop offset=".55" stop-color="#f2d422"/><stop offset=".6" stop-color="#ffa21a"/><stop offset=".68" stop-color="#ff6a1f"/><stop offset=".8" stop-color="#ff2a1f"/><stop offset="1" stop-color="#8f0f15"/></linearGradient></defs>
+            </svg>
+            <div class="lab__ctl">
+              <label for="lam">Fünfte Wellenlänge λ₅ <output for="lam">530 nm</output></label>
+              <input class="lab__range" id="lam" type="range" min="400" max="750" step="1" value="530" aria-describedby="lam-hint" />
+              <div class="lab__presets" id="lam-hint" role="group" aria-label="Wellenlängen zum Vergleich">
+                <button type="button" data-nm="450" style="--c: #6f7cff">450</button>
+                <button type="button" data-nm="480" style="--c: #22cfdc">480</button>
+                <button type="button" data-nm="530" style="--c: #4cd964">530</button>
+                <button type="button" data-nm="590" style="--c: #ffab2e">590</button>
+                <button type="button" data-nm="660" style="--c: #ff4a3d">660</button>
+              </div>
+            </div>
+            <figcaption class="credit">Blau: Literaturdaten <a class="ref" href="quellen.html#q18">[18]</a>. Gestrichelt: unsere Erwartung (Schema), keine Messdaten. Punkte: unsere vier LEDs.</figcaption>
+          </figure>
+
+          <div class="calc" aria-live="polite">
+            <div class="calc__head"><span class="calc__swatch" aria-hidden="true"></span><div><b data-c="nm">530 nm</b><span data-c="name">grün</span></div></div>
+            <div class="calc__row">
+              <span class="calc__k">1 · Energie eines Photons</span>
+              <span class="calc__f"><var>E</var> = <var>h</var> · <var>c</var> / <var>λ</var></span>
+              <span class="calc__f" data-c="e"></span>
+            </div>
+            <div class="calc__row">
+              <span class="calc__k">2 · Wie stark schluckt die Probe? (Lambert-Beer)</span>
+              <span class="calc__f"><var>A</var> = <var>ε</var>(<var>λ</var>) · <var>c</var> · <var>d</var></span>
+              <span class="calc__f" data-c="a"></span>
+            </div>
+            <div class="calc__row">
+              <span class="calc__k">3 · Geschluckter Anteil</span>
+              <span class="calc__r" data-c="ab"></span>
+              <span class="calc__bar" aria-hidden="true"><i data-c="abbar"></i></span>
+            </div>
+            <div class="calc__row">
+              <span class="calc__k">4 · Photonen bei gleicher Lichtleistung</span>
+              <span class="calc__f"><var>N</var> ∝ <var>P</var> · <var>λ</var> / (<var>h</var> · <var>c</var>)</span>
+              <span class="calc__r" data-c="n"></span>
+            </div>
+            <div class="calc__row calc__row--pred">
+              <span class="calc__k">5 · Erwartete Bleichrate (Hypothese)</span>
+              <span class="calc__f"><var>k</var> ∝ <var>N</var> · (1 − 10<sup>−<var>A</var></sup>)</span>
+              <span class="calc__r" data-c="k"></span>
+              <span class="calc__bar" aria-hidden="true"><i data-c="kbar"></i></span>
+            </div>
+            <div class="calc__row">
+              <span class="calc__k">6 · Wie schnell verblasst die Probe?</span>
+              <span class="calc__f"><var>A</var>(<var>t</var>) = <var>A</var>₀ · e<sup>−<var>k</var>·<var>t</var></sup> → <var>t</var>½ = ln 2 / <var>k</var></span>
+              <span class="calc__r" data-c="t"></span>
+            </div>
+          </div>
+        </div>
+        <ol class="reg__steps" style="max-width: 760px; margin-top: 40px">
+          <li data-reveal><span>1</span>Messen bei vier Farben – vier echte Bleichraten k</li>
+          <li data-reveal style="--d: 60ms"><span>2</span>Modell anpassen – Kurve durch die vier Punkte</li>
+          <li data-reveal style="--d: 120ms"><span>3</span>Fünfte Farbe vorhersagen – den Wert bei λ₅ ablesen</li>
+          <li data-reveal style="--d: 180ms"><span>4</span>Nachmessen – stimmt die Vorhersage?</li>
+        </ol>
+        <p class="lead" data-reveal style="max-width: 46em">Das Modell kennt die Formeln oben nicht – es lernt den Zusammenhang allein aus unseren Messpunkten. Stimmt unsere Erwartung, landet die Vorhersage auf der gestrichelten Kurve. Liegt sie daneben, zum Beispiel weil energiereiches blaues Licht zusätzlich schadet, haben wir etwas Neues herausgefunden. Keine Blackbox, sondern eine Kurve, die man erklären kann.</p>
+        <p class="credit" data-reveal>Beispielrechnung mit c = 10 µmol/L und d = 1 cm, bei gleicher Lichtleistung und relativ zur roten LED. Die fünfte Wellenlänge legen wir noch fest.</p>
+      </div>
+    </section>
+
+    <section class="sec rounded-top" data-theme="light" aria-labelledby="ai-wie-h">
+      <div class="wrap">
+        <header class="sec-head sec-head--row">
+          <div>
+            <p class="kicker" data-reveal>Das „AI“ im Namen</p>
+            <h2 class="h2" id="ai-wie-h" data-reveal>Keine Blackbox, sondern eine Kurve</h2>
+          </div>
+          <p class="lead" data-reveal>Das Modell kennt unsere Formeln nicht. Es lernt den Zusammenhang allein aus den Messpunkten – und muss sich danach an einer echten Messung beweisen.</p>
+        </header>
+        <div class="cards cards--4">
+          <article class="card" data-reveal><p class="card__n">01 · Messen</p><h3 class="h3">Vier Bleichraten</h3><p>Bei 660, 590, 480 und 450 nm messen wir, wie schnell die Absorbanz sinkt – je dreimal, mit Blindprobe.</p></article>
+          <article class="card" data-reveal style="--d: 60ms"><p class="card__n">02 · Lernen</p><h3 class="h3">Kurve anpassen</h3><p>Ein Regressionsmodell legt die am besten passende Kurve durch die vier Punkte – samt Unsicherheit.</p></article>
+          <article class="card" data-reveal style="--d: 120ms"><p class="card__n">03 · Vorhersagen</p><h3 class="h3">Wert bei λ₅</h3><p>An der fünften Wellenlänge lesen wir die vorhergesagte Bleichrate ab – bevor wir dort messen.</p></article>
+          <article class="card" data-reveal style="--d: 180ms"><p class="card__n">04 · Prüfen</p><h3 class="h3">Nachmessen</h3><p>Dann messen wir bei λ₅ wirklich. Stimmt die Vorhersage? Und wenn nicht: Was haben wir übersehen?</p></article>
+        </div>
+        <div class="note" data-reveal style="margin-top: 28px"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span><b>Ehrlich gesagt:</b> Messdaten haben wir noch keine. Alle Kurven auf dieser Seite sind als Literaturdaten oder Erwartung beschriftet. Sobald die ersten Messreihen laufen, zeigt der Regler oben automatisch unsere echten Punkte.</span></div>
+      </div>
+    </section>
+
+    <section class="sec rounded-top" id="methode" data-theme="dark" aria-labelledby="meth-h">
+      <div class="wrap">
+        <header class="sec-head sec-head--center">
+          <p class="kicker" data-reveal>Methode</p>
+          <h2 class="h2" id="meth-h" data-reveal>So messen wir sauber</h2>
+          <p class="lead" data-reveal>Eine Vorhersage ist nur so gut wie die Messung dahinter. Deshalb bekommt jede mögliche Störquelle ihre eigene Kontrolle.</p>
+        </header>
+        <figure class="cycle" data-reveal>
+          <span class="kicker">Ein Messtakt · 15 Sekunden · in Echtzeit</span>
+          <div class="cycle__bar">
+            <div class="cycle__on"><span>LED an · 11 s</span></div>
+            <div class="cycle__off"><span>4 s messen</span></div>
+            <i class="cycle__head" aria-hidden="true"></i>
+          </div>
+          <figcaption class="cycle__note">Das Spektrometer misst nur, wenn die LED aus ist. So sieht es nur das Licht, das durch die Probe kommt – nicht die LED selbst.</figcaption>
+        </figure>
+        <div class="accs" data-reveal>
+          <details class="acc"><summary>Nullprobe<i aria-hidden="true"></i></summary><div class="acc__body"><p>Dieselbe Lösung durchläuft denselben Ablauf, aber ohne Licht. So sehen wir, ob sich Methylenblau auch im Dunkeln verändert.</p></div></details>
+          <details class="acc"><summary>Dunkelversuch zuerst<i aria-hidden="true"></i></summary><div class="acc__body"><p>Ein Teil des Verblassens kann umkehrbar sein: Methylenblau kann in eine farblose Form (Leukomethylenblau) übergehen, die mit Sauerstoff wieder blau wird. Das prüfen wir vor allen anderen Messungen.</p></div></details>
+          <details class="acc"><summary>Zwillingsküvette<i aria-hidden="true"></i></summary><div class="acc__body"><p>Eine gleich gefüllte Küvette steht immer daneben, wird aber nie bestrahlt. Sie zeigt, was Wärme und Zeit allein bewirken.</p></div></details>
+          <details class="acc"><summary>Streulicht-Korrektur<i aria-hidden="true"></i></summary><div class="acc__body"><p>Luftbläschen und Schlieren streuen Licht in allen Farben. Darum ziehen wir den Wert bei 790–810 nm, wo Methylenblau kaum absorbiert, vom Messwert bei 660–668 nm ab. Ein Fenster bei 890–910 nm dient als Kontrolle.</p></div></details>
+          <details class="acc"><summary>Temperatur<i aria-hidden="true"></i></summary><div class="acc__body"><p>Wärme könnte das Ausbleichen beschleunigen. Ein Fühler in der Zwillingsküvette (±0,2 °C) und ein Sensor in der Kammer zeichnen die Temperatur mit auf.</p></div></details>
+          <details class="acc"><summary>Gleiche Bedingungen<i aria-hidden="true"></i></summary><div class="acc__body"><p>Alle vier LED-Farben laufen über denselben Treiber mit 350 mA und sitzen dank der Passstifte an exakt derselben Stelle. So unterscheiden sich die Messungen nur in der Lichtfarbe.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <div class="gloss" id="g-nm" popover>
+      <p class="gloss__t">Wellenlänge</p>
+      <p>Die Wellenlänge bestimmt die Farbe des Lichts. Sie wird in Nanometern (nm) angegeben – ein Nanometer ist ein Millionstel Millimeter. 450 nm ist blau, 660 nm tiefrot.</p>
+      <button class="gloss__x" type="button" popovertarget="g-nm" popovertargetaction="hide" aria-label="Erklärung schließen">×</button>
+    </div>
+    <div class="gloss" id="g-rate" popover>
+      <p class="gloss__t">Bleichrate</p>
+      <p>Wie schnell ein Farbstoff unter Licht ausbleicht – also wie schnell seine Absorbanz mit der Zeit sinkt. Man schreibt sie als k.</p>
+      <button class="gloss__x" type="button" popovertarget="g-rate" popovertargetaction="hide" aria-label="Erklärung schließen">×</button>
+    </div>
+    <div class="gloss" id="g-reg" popover>
+      <p class="gloss__t">Regressionsmodell</p>
+      <p>Ein Rechenverfahren, das eine möglichst gut passende Kurve durch Messpunkte legt. Mit dieser Kurve lassen sich Werte abschätzen, die man nicht gemessen hat.</p>
+      <button class="gloss__x" type="button" popovertarget="g-reg" popovertargetaction="hide" aria-label="Erklärung schließen">×</button>
+    </div>
+    <nav class="next" data-theme="dark" aria-label="Weiter">
+      <div class="wrap">
+        <a class="next__card" href="anwendungen.html">
+          <img src="assets/img/foto-pdt-rotlicht.webp" alt="" loading="lazy" />
+          <span class="next__in">
+            <span><span class="kicker" style="color: #c6cfe1">Weiter · 05 Anwendungen</span><span class="next__title">Wo Lichtfänger arbeiten</span><span class="next__text">Farbstoffsolarzelle, Wasserstoff aus Sonnenlicht, Medizin – und eine Vision für ein Kraftwerk.</span></span>
+            <span class="next__go" aria-hidden="true">→</span>
+          </span>
+        </a>
+        <a class="next__back" href="messbox.html">← Zurück zu 03 Messbox</a>
+      </div>
+    </nav>
+  </main>
+
+  <footer class="site-footer" data-theme="dark">
+    <div class="wrap">
+      <p class="site-footer__big">Licht nutzen.<br /><span>Alterung vorhersagen.</span></p>
+      <div class="site-footer__grid">
+        <div>
+          <h4>AI-Photoguard</h4>
+          <p>Jugend forscht 2027 · Fachgebiet Chemie<br />Staatliche Fachoberschule Holzkirchen<br />Joshua · Max · Helena</p>
+        </div>
+        <div>
+          <h4>Projekt</h4>
+          <ul><li><a href="idee.html">Idee</a></li><li><a href="forschungsweg.html">Forschungsweg</a></li><li><a href="team.html">Team &amp; Stand</a></li><li><a href="index.html">Start</a></li></ul>
+        </div>
+        <div>
+          <h4>Wissen &amp; Technik</h4>
+          <ul><li><a href="wissen.html">Wissen</a></li><li><a href="messbox.html">Messbox in 3D</a></li><li><a href="vorhersage.html">Vorhersage</a></li><li><a href="anwendungen.html">Anwendungen</a></li></ul>
+        </div>
+        <div>
+          <h4>Mehr</h4>
+          <ul><li><a href="#film" data-film>Film ansehen</a></li><li><a href="quellen.html">Quellen &amp; Bildnachweis</a></li><li><a href="quellen.html#impressum">Impressum</a></li><li><a href="quellen.html#datenschutz">Datenschutz</a></li></ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom"><span>Keine Cookies · kein Tracking · keine fremden Server</span><span>Stand: 10. Oktober 2026</span></div>
+    </div>
+  </footer>
+
+  <dialog class="film" id="film" aria-label="Film: AI-Photoguard in 90 Sekunden">
+    <video controls playsinline preload="none" poster="assets/video/film-poster.webp" data-src="assets/video/film-ai-photoguard.mp4"></video>
+    <div class="film__bar"><span>AI-Photoguard · Flug durch die Messbox · 1:30 · mit Ton</span><button class="film__x" type="button" data-film-close aria-label="Film schließen">×</button></div>
+  </dialog>
+</div>
+<script src="assets/js/uebergaenge.js?v=6.1" defer></script>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
+<script src="assets/js/site.js?v=6.1" defer></script>
+<script src="assets/data/methylenblau.js?v=6.1" defer></script>
+<script src="assets/data/messdaten.js?v=6.1" defer></script>
+<script src="assets/js/vorhersage.js?v=6.1" defer></script>
+</body>
+</html>

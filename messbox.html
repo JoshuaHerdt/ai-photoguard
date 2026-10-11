@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="de" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Die Messbox in 3D – AI-Photoguard</title>
+  <meta name="description" content="Die Messbox v4.1 von AI-Photoguard als 3D-Rundgang in acht Stationen – zum Drehen, mit Lichtfarben zum Auswählen, aus unseren echten Druckdaten." />
+  <meta name="theme-color" content="#07080b" />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/icons/icon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Photoguard" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:site_name" content="AI-Photoguard" />
+  <meta property="og:title" content="Die Messbox in 3D – AI-Photoguard" />
+  <meta property="og:description" content="Die Messbox v4.1 von AI-Photoguard als 3D-Rundgang in acht Stationen – zum Drehen, mit Lichtfarben zum Auswählen, aus unseren echten Druckdaten." />
+  <meta property="og:image" content="assets/img/teilen-messbox.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/vendor/three.min.js" as="script" />
+  <link rel="preload" href="assets/data/messbox-data.js" as="script" />
+  <link rel="stylesheet" href="assets/css/site.css?v=6.1" />
+  <link rel="stylesheet" href="assets/css/bausteine.css?v=6.1" />
+  <link rel="stylesheet" href="assets/css/v6-unterseiten.css?v=6.1" />
+  <link rel="stylesheet" href="assets/css/uebergaenge.css?v=6.1" />
+  <script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");["pagereveal","pageswap"].forEach(function(n){addEventListener(n,function(e){var v=e.viewTransition;if(v){[v.ready,v.finished,v.updateCallbackDone].forEach(function(p){if(p&&p.catch)p.catch(function(){});});}});});</script>
+</head>
+<body data-page="messbox" data-nolenis>
+<div class="page">
+  <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+  <header class="site-header" data-theme="dark">
+    <a class="brand" href="index.html" aria-label="AI-Photoguard – Startseite"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7.4" y="5.2" width="9.2" height="16" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="8.9" y="11" width="6.2" height="8.7" rx=".9" fill="#2A63FF"/><path d="M12 .8v3.4" stroke="#FF4A3D" stroke-width="2" stroke-linecap="round"/></svg><span>AI-Photo<b>guard</b></span></a>
+    <nav class="desk-nav" aria-label="Hauptnavigation"><ul><li><a href="idee.html">Idee</a></li><li><a href="wissen.html">Wissen</a></li><li><a href="messbox.html">Messbox</a></li><li><a href="rundgang.html">Durch die Messbox</a></li><li><a href="vorhersage.html">Vorhersage</a></li><li><a href="anwendungen.html">Anwendungen</a></li><li><a href="forschungsweg.html">Forschungsweg</a></li><li><a href="team.html">Team & Stand</a></li></ul></nav>
+    <button class="film-btn" type="button" data-film><i><svg viewBox="0 0 12 14" aria-hidden="true"><path d="M1 1l10 6-10 6z" fill="currentColor"/></svg></i>Film ansehen</button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="menu-btn__label">Menü</span><span class="menu-btn__icon" aria-hidden="true"><i></i><i></i></span></button>
+    <div class="progress" aria-hidden="true"><span></span></div>
+  </header>
+  <nav class="menu" id="menu" aria-label="Seiten" hidden>
+    <div class="menu__glow" aria-hidden="true"></div>
+    <p class="kicker">AI-Photoguard · Jugend forscht 2027</p>
+    <ol class="menu__list">
+      <li><a href="index.html" style="--i:0"><span class="menu__num">00</span><span class="menu__title">Start</span><span class="menu__time"></span></a></li>
+      <li><a href="idee.html" style="--i:0"><span class="menu__num">01</span><span class="menu__title">Idee</span><span class="menu__time">Warum</span></a></li>
+      <li><a href="wissen.html" style="--i:1"><span class="menu__num">02</span><span class="menu__title">Wissen</span><span class="menu__time">Chemie</span></a></li>
+      <li><a href="messbox.html" style="--i:2"><span class="menu__num">03</span><span class="menu__title">Messbox</span><span class="menu__time">in 3D</span></a></li>
+      <li><a href="rundgang.html" style="--i:3"><span class="menu__num">★</span><span class="menu__title">Durch die Messbox</span><span class="menu__time">Test</span></a></li>
+      <li><a href="vorhersage.html" style="--i:4"><span class="menu__num">04</span><span class="menu__title">Vorhersage</span><span class="menu__time">zum Ausprobieren</span></a></li>
+      <li><a href="anwendungen.html" style="--i:5"><span class="menu__num">05</span><span class="menu__title">Anwendungen</span><span class="menu__time">Nutzen</span></a></li>
+      <li><a href="forschungsweg.html" style="--i:6"><span class="menu__num">06</span><span class="menu__title">Forschungsweg</span><span class="menu__time">seit 2025</span></a></li>
+      <li><a href="team.html" style="--i:7"><span class="menu__num">07</span><span class="menu__title">Team & Stand</span><span class="menu__time">wer & wann</span></a></li>
+    </ol>
+    <div class="menu__foot"><button class="btn" type="button" data-film>Film ansehen <i><svg viewBox="0 0 12 14" aria-hidden="true"><path d="M1 1l10 6-10 6z" fill="currentColor"/></svg></i></button><span>Chemie · FOS Holzkirchen · <a href="quellen.html">Quellen</a></span></div>
+  </nav>
+
+<main id="inhalt">
+    <section class="mbx" data-theme="dark" aria-label="Die Messbox als 3D-Rundgang">
+      <div class="mbx__bg mbx__bg--light" aria-hidden="true"></div>
+      <div class="mbx__bg mbx__bg--dark" aria-hidden="true"></div>
+      <img class="mbx__poster" src="assets/img/messbox-vorschau.webp" alt="" aria-hidden="true" width="800" height="574" />
+      <canvas class="mbx__canvas" aria-hidden="true"></canvas>
+      <svg class="mbx__lines" aria-hidden="true"></svg>
+      <div class="mbx__labels" aria-hidden="true"></div>
+      <div class="mbx__loading" aria-hidden="true"><i></i>3D-Modell lädt …</div>
+
+      <div class="mbx__top wrap">
+        <p class="chapter-tag"><b>03</b>Messbox <span>in 3D</span></p>
+        <div class="mbx__stations" aria-hidden="true">
+          <button type="button" tabindex="-1" data-go="0">Außen</button><button type="button" tabindex="-1" data-go="1">Elektronik</button><button type="button" tabindex="-1" data-go="2">Deckel</button><button type="button" tabindex="-1" data-go="3">Aufbau</button><button type="button" tabindex="-1" data-go="4">Lichtfarben</button><button type="button" tabindex="-1" data-go="5">Messung</button><button type="button" tabindex="-1" data-go="6">Kontrolle</button><button type="button" tabindex="-1" data-go="7">Ganze Box</button>
+        </div>
+        <button class="mbx__play" type="button" aria-label="Rundgang automatisch abspielen">
+          <svg class="i-play" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 1l11 6-11 6z"/></svg><svg class="i-pause" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 1h3.5v12H2zM8.5 1H12v12H8.5z"/></svg><span>Automatisch</span>
+        </button>
+      </div>
+      <p class="mbx__hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 12h17M7 8.5L3.5 12 7 15.5M17 8.5l3.5 3.5-3.5 3.5"/></svg>Ziehen zum Drehen</p>
+
+      <div class="mbx__ui">
+        <button class="mbx__fold" type="button" aria-expanded="true" aria-controls="mbx-panels"><span>Weniger Text</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="mbx__panels" id="mbx-panels" aria-live="polite" tabindex="0" aria-label="Text zur Station">
+
+          <article class="mbx__panel is-on" data-step="0">
+            <div class="st-head"><span class="st-num">01<small> / 08</small></span><p class="kicker">Außen</p></div>
+            <h1 class="h3">Die Messbox</h1>
+            <p>Eine Dunkelkammer aus dem 3D-Drucker. Darin bestrahlen wir den Farbstoff Methylenblau mit vier Lichtfarben – und messen, wie schnell seine Farbe verschwindet.</p>
+            <div class="why"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span><b>Warum so dicht?</b> Das Spektrometer misst so genau, dass schon ein wenig Licht von außen das Ergebnis verfälschen würde. Darum kommt kein Licht hinein, das wir nicht selbst einschalten.</span></div>
+          </article>
+
+          <article class="mbx__panel" data-step="1">
+            <div class="st-head"><span class="st-num">02<small> / 08</small></span><p class="kicker">Elektronik</p></div>
+            <h2 class="h3">Alles, was leuchtet, bleibt draußen</h2>
+            <p>Ein Mini-Computer (<button class="term" type="button" popovertarget="g-esp">ESP32</button>) schaltet die LEDs und gibt den Takt vor. Ein Treiber hält den Strom genau bei 350 mA – jede Lichtfarbe bekommt so dieselben Bedingungen.</p>
+            <div class="why"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span><b>Schon eine Kontroll-Leuchte stört.</b> In einer Dunkelkammer ist jede kleine LED eine Störquelle. Deshalb sitzt die ganze Elektronik in einem eigenen Kasten außerhalb.</span></div>
+          </article>
+
+          <article class="mbx__panel" data-step="2">
+            <div class="st-head"><span class="st-num">03<small> / 08</small></span><p class="kicker">Deckel</p></div>
+            <h2 class="h3">Nur eine einzige Öffnung</h2>
+            <p>Über eine Wechselklappe direkt über der Probe kommt man an die <button class="term" type="button" popovertarget="g-kuevette">Küvette</button>. Ihr Rand ist verwinkelt gebaut – als Labyrinth-Lippe.</p>
+            <div class="why"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span><b>Licht kommt nicht um die Ecke.</b> Durch einen geraden Spalt würde es einfach hineinscheinen. Im verwinkelten Rand müsste es mehrmals abprallen und verliert dabei fast alles.</span></div>
+          </article>
+
+          <article class="mbx__panel" data-step="3">
+            <div class="st-head"><span class="st-num">04<small> / 08</small></span><p class="kicker">Aufbau</p></div>
+            <h2 class="h3">25 Teile, die immer gleich sitzen</h2>
+            <p>Sockel mit Schublade für die Ersatz-LEDs, Kammer, eine Adapterplatte auf dem <button class="term" type="button" popovertarget="g-spektro">Spektrometer</button> und Schienen für den Lichtkopf. Drei Passstifte richten alles aus.</p>
+            <div class="why"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span><b>0,30 mm Spiel – etwa drei Blatt Papier.</b> So sitzt nach jedem Zusammenbauen alles wieder an derselben Stelle. Wichtig, damit Messungen an verschiedenen Tagen vergleichbar bleiben.</span></div>
+          </article>
+
+          <article class="mbx__panel" data-step="4">
+            <div class="st-head"><span class="st-num">05<small> / 08</small></span><p class="kicker">Lichtfarben</p></div>
+            <h2 class="h3">Vier Farben, ein Platz</h2>
+            <p>Lichtfarbe antippen – der Lichtkopf wechselt das LED-Modul. Danach sitzt jede Farbe exakt an derselben Stelle über der Probe.</p>
+            <div class="ledsel" role="group" aria-label="Lichtfarbe wählen">
+              <button type="button" data-led="0" style="--c: var(--l660)" aria-pressed="true"><b>660</b><small>tiefrot</small></button>
+              <button type="button" data-led="1" style="--c: var(--l590)" aria-pressed="false"><b>590</b><small>gelb</small></button>
+              <button type="button" data-led="2" style="--c: var(--l480)" aria-pressed="false"><b>480</b><small>türkis</small></button>
+              <button type="button" data-led="3" style="--c: var(--l450)" aria-pressed="false"><b>450</b><small>königsblau</small></button>
+            </div>
+            <dl class="ledinfo" aria-live="polite">
+              <dt>Absorption</dt><dd><span data-li="a">≈ 97 % des Maximums</span><span class="absbar" aria-hidden="true"><i></i></span></dd>
+              <dt>Energie</dt><dd data-li="e">1,88 eV pro Photon</dd>
+            </dl>
+            <div class="why"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span><b>Warum vier Farben?</b> Methylenblau schluckt Rot fast vollständig, Gelb zu etwa einem Drittel, Türkis und Blau kaum. Vier Farben über das ganze Spektrum ergeben vier Messpunkte – genug, um eine Kurve anzupassen und eine fünfte Farbe vorherzusagen. <a class="ref" href="quellen.html#q18">[18]</a></span></div>
+          </article>
+
+          <article class="mbx__panel" data-step="5">
+            <div class="st-head"><span class="st-num">06<small> / 08</small></span><p class="kicker">Messung</p></div>
+            <h2 class="h3">Licht an. Licht aus. Messen.</h2>
+            <p>Die LED bestrahlt die Probe von oben, das Spektrometer misst quer dazu – aber nur in der 4-Sekunden-Pause. Der Takt läuft hier in Echtzeit.</p>
+            <div class="takt" aria-hidden="true">
+              <div class="takt__state"><span class="takt__label">LED an · Probe wird bestrahlt</span><em class="takt__left">noch 11 s</em></div>
+              <div class="takt__bar"><b></b><s></s><i></i></div>
+              <div class="takt__legend"><span>0 s</span><span>LED an 11 s</span><span>messen 4 s</span></div>
+              <div class="scope">
+                <div class="scope__head"><span>Spektrometer-Sicht · Schema</span><b class="scope__state">geblendet</b></div>
+                <svg viewBox="0 0 300 92" preserveAspectRatio="none">
+                  <line class="sc-ax" x1="0" y1="80.5" x2="300" y2="80.5"/>
+                  <path class="sc-mb" d="M0 80 L0.0 78.9 L1.7 79.0 L3.4 79.1 L5.1 79.1 L6.9 79.3 L8.6 79.3 L10.3 79.4 L12.0 79.4 L13.7 79.5 L15.4 79.5 L17.1 79.4 L18.9 79.4 L20.6 79.5 L22.3 79.4 L24.0 79.4 L25.7 79.3 L27.4 79.4 L29.1 79.3 L30.9 79.3 L32.6 79.2 L34.3 79.1 L36.0 79.1 L37.7 79.0 L39.4 79.0 L41.1 79.0 L42.9 78.9 L44.6 78.8 L46.3 78.8 L48.0 78.7 L49.7 78.5 L51.4 78.6 L53.1 78.5 L54.9 78.3 L56.6 78.4 L58.3 78.2 L60.0 78.3 L61.7 78.1 L63.4 78.1 L65.1 77.9 L66.9 77.9 L68.6 77.8 L70.3 77.7 L72.0 77.5 L73.7 77.1 L75.4 77.6 L77.1 77.4 L78.9 77.4 L80.6 77.4 L82.3 77.2 L84.0 77.3 L85.7 77.3 L87.4 77.2 L89.1 77.3 L90.9 77.3 L92.6 77.2 L94.3 77.2 L96.0 77.3 L97.7 77.2 L99.4 77.3 L101.1 77.2 L102.9 77.2 L104.6 77.2 L106.3 77.0 L108.0 76.9 L109.7 76.9 L111.4 76.7 L113.1 76.5 L114.9 76.4 L116.6 76.3 L118.3 75.9 L120.0 75.8 L121.7 75.4 L123.4 75.2 L125.1 74.9 L126.9 74.5 L128.6 74.1 L130.3 73.6 L132.0 73.3 L133.7 72.8 L135.4 72.4 L137.1 71.8 L138.9 71.1 L140.6 70.4 L142.3 69.7 L144.0 69.1 L145.7 68.7 L147.4 68.2 L149.1 67.4 L150.9 66.6 L152.6 65.9 L154.3 64.8 L156.0 64.0 L157.7 62.6 L159.4 61.8 L161.1 60.4 L162.9 59.2 L164.6 57.3 L166.3 56.0 L168.0 54.6 L169.7 52.8 L171.4 51.1 L173.1 49.5 L174.9 48.2 L176.6 46.7 L178.3 45.9 L180.0 44.6 L181.7 44.0 L183.4 43.5 L185.1 43.3 L186.9 43.0 L188.6 42.8 L190.3 42.5 L192.0 42.3 L193.7 41.9 L195.4 41.3 L197.1 40.5 L198.9 39.4 L200.6 38.2 L202.3 36.4 L204.0 34.8 L205.7 33.0 L207.4 30.9 L209.1 28.4 L210.9 25.9 L212.6 23.0 L214.3 20.8 L216.0 17.6 L217.7 14.8 L219.4 10.8 L221.1 13.6 L222.9 12.3 L224.6 11.0 L226.3 10.0 L228.0 10.0 L229.7 10.9 L231.4 12.8 L233.1 16.0 L234.9 20.1 L236.6 25.7 L238.3 31.8 L240.0 37.6 L241.7 43.5 L243.4 49.8 L245.1 54.3 L246.9 58.5 L248.6 62.6 L250.3 65.8 L252.0 68.4 L253.7 70.7 L255.4 72.5 L257.1 73.8 L258.9 75.0 L260.6 75.9 L262.3 76.5 L264.0 77.3 L265.7 77.7 L267.4 78.0 L269.1 78.3 L270.9 78.7 L272.6 78.8 L274.3 79.0 L276.0 79.1 L277.7 79.1 L279.4 79.2 L281.1 79.4 L282.9 79.3 L284.6 79.5 L286.3 79.4 L288.0 79.5 L289.7 79.7 L291.4 79.6 L293.1 79.8 L294.9 79.7 L296.6 79.7 L298.3 79.6 L300.0 79.6 L300 80 Z"/>
+                  <path class="sc-led" d="M0 80 L0 80.0 L2 80.0 L4 80.0 L6 80.0 L8 80.0 L10 80.0 L12 80.0 L14 80.0 L16 80.0 L18 80.0 L20 80.0 L22 80.0 L24 80.0 L26 80.0 L28 80.0 L30 80.0 L32 80.0 L34 80.0 L36 80.0 L38 80.0 L40 80.0 L42 80.0 L44 80.0 L46 80.0 L48 80.0 L50 80.0 L52 80.0 L54 80.0 L56 80.0 L58 80.0 L60 80.0 L62 80.0 L64 80.0 L66 80.0 L68 80.0 L70 80.0 L72 80.0 L74 80.0 L76 80.0 L78 80.0 L80 80.0 L82 80.0 L84 80.0 L86 80.0 L88 80.0 L90 80.0 L92 80.0 L94 80.0 L96 80.0 L98 80.0 L100 80.0 L102 80.0 L104 80.0 L106 80.0 L108 80.0 L110 80.0 L112 80.0 L114 80.0 L116 80.0 L118 80.0 L120 80.0 L122 80.0 L124 80.0 L126 80.0 L128 80.0 L130 80.0 L132 80.0 L134 80.0 L136 80.0 L138 80.0 L140 80.0 L142 80.0 L144 80.0 L146 80.0 L148 80.0 L150 80.0 L152 80.0 L154 80.0 L156 80.0 L158 80.0 L160 80.0 L162 80.0 L164 80.0 L166 80.0 L168 80.0 L170 80.0 L172 80.0 L174 80.0 L176 80.0 L178 80.0 L180 80.0 L182 80.0 L184 80.0 L186 80.0 L188 80.0 L190 80.0 L192 80.0 L194 79.9 L196 79.8 L198 79.6 L200 79.1 L202 78.0 L204 76.2 L206 73.0 L208 68.1 L210 61.0 L212 51.8 L214 40.7 L216 28.8 L218 17.7 L220 9.0 L222 4.5 L224 4.8 L226 10.1 L228 19.1 L230 30.5 L232 42.3 L234 53.2 L236 62.2 L238 68.9 L240 73.6 L242 76.5 L244 78.2 L246 79.2 L248 79.6 L250 79.8 L252 79.9 L254 80.0 L256 80.0 L258 80.0 L260 80.0 L262 80.0 L264 80.0 L266 80.0 L268 80.0 L270 80.0 L272 80.0 L274 80.0 L276 80.0 L278 80.0 L280 80.0 L282 80.0 L284 80.0 L286 80.0 L288 80.0 L290 80.0 L292 80.0 L294 80.0 L296 80.0 L298 80.0 L300 80.0 L300 80 Z"/>
+                  <text x="0" y="91">400</text><text x="128" y="91">550</text><text x="268" y="91">750 nm</text>
+                </svg>
+              </div>
+            </div>
+            <div class="why"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span><b>Warum im Dunkeln messen?</b> Solange die LED leuchtet, sieht das Spektrometer vor allem ihr Licht – wie ein Foto gegen die Sonne. Erst in der Pause sieht es nur noch, wie viel Licht der Farbstoff schluckt.</span></div>
+          </article>
+
+          <article class="mbx__panel" data-step="6">
+            <div class="st-head"><span class="st-num">07<small> / 08</small></span><p class="kicker">Kontrolle</p></div>
+            <h2 class="h3">Der Beweis: die Zwillingsprobe</h2>
+            <p>Verblasst die Probe wirklich durch das Licht – oder durch Wärme und Zeit? Eine gleich gefüllte Küvette steht direkt daneben und erlebt alles genauso, nur ohne Licht. Ein Fühler misst dabei ihre Temperatur.</p>
+            <div class="twin" aria-hidden="true">
+              <figure><div class="twin__cuv twin__cuv--lit"></div><figcaption>bestrahlt</figcaption></figure>
+              <span class="twin__eq">vs.</span>
+              <figure><div class="twin__cuv"></div><figcaption>Zwilling,<br />im Dunkeln</figcaption></figure>
+              <p class="twin__res"><b>Unterschied</b> = Wirkung des Lichts</p>
+            </div>
+            <div class="why"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span><b>Ohne Kontrolle wäre jedes Ergebnis angreifbar.</b> Erst der Vergleich mit dem Zwilling zeigt, welcher Anteil des Ausbleichens wirklich vom Licht kommt.</span></div>
+          </article>
+
+          <article class="mbx__panel" data-step="7">
+            <div class="st-head"><span class="st-num">08<small> / 08</small></span><p class="kicker">Ganze Box</p></div>
+            <h2 class="h3">Alles in einer Box</h2>
+            <p>Zum Schluss noch einmal das Ganze, aufgeschnitten: Lichtkopf oben, Probe im Spektrometer, daneben der Zwilling. Zusammen liefern sie Messwerte, denen man trauen kann.</p>
+            <ul class="sum">
+              <li style="--c: var(--blue-light)"><b>Dunkelkammer</b>kein fremdes Licht</li>
+              <li style="--c: var(--l660)"><b>4 Lichtfarben</b>an genau einem Platz</li>
+              <li style="--c: #fff"><b>Messen im Takt</b>11 s Licht, 4 s messen</li>
+              <li style="--c: var(--l590)"><b>Zwillingsprobe</b>als Kontrolle</li>
+            </ul>
+          </article>
+        </div>
+        <div class="mbx__ctrl">
+          <button class="mbx__btn mbx__btn--prev" type="button" aria-label="Vorherige Station">←<span>&nbsp;Zurück</span></button>
+          <div class="mbx__dots" role="group" aria-label="Station wählen">
+            <button type="button" aria-label="Station 1: Außen"><i></i></button><button type="button" aria-label="Station 2: Elektronik"><i></i></button><button type="button" aria-label="Station 3: Deckel"><i></i></button><button type="button" aria-label="Station 4: Aufbau"><i></i></button><button type="button" aria-label="Station 5: Lichtfarben"><i></i></button><button type="button" aria-label="Station 6: Messung"><i></i></button><button type="button" aria-label="Station 7: Kontrolle"><i></i></button><button type="button" aria-label="Station 8: Ganze Box"><i></i></button>
+          </div>
+          <button class="mbx__btn mbx__btn--next" type="button" aria-label="Nächste Station">Weiter →</button>
+          <a class="mbx__btn mbx__btn--next mbx__btn--chapter" href="#bau" hidden>Weiter ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="bau" data-theme="dark" aria-labelledby="bau-h">
+      <div class="wrap">
+        <header class="sec-head sec-head--row">
+          <div>
+            <p class="kicker" data-reveal>Vom Modell zum Bauteil</p>
+            <h2 class="h2" id="bau-h" data-reveal>Konstruiert am Rechner, gedruckt Schicht für Schicht</h2>
+          </div>
+          <p class="lead" data-reveal>Alle Druckteile im 3D-Modell sind unsere echten Konstruktionsdaten. Bevor gedruckt wird, messen wir die geliehenen Geräte genau aus – lieber einmal richtig als dreimal neu.</p>
+        </header>
+        <div class="nums" data-reveal>
+          <div class="num-card"><p class="num-card__v"><span data-count="25">25</span><small>Teile</small></p><p>Selbst konstruierte Druckteile aus schwarzem PLA, zusammen etwa 860 g.</p></div>
+          <div class="num-card"><p class="num-card__v">0,30<small>mm</small></p><p>Spiel an den Passstiften – etwa drei Blatt Papier. Passungstest am 08.09.2026 bestanden.</p></div>
+          <div class="num-card"><p class="num-card__v"><span data-count="4">4</span><small>LEDs</small></p><p>Wechselmodule à 3 W bei 660, 590, 480 und 450 nm – alle am selben Platz, mit 350 mA.</p></div>
+          <div class="num-card"><p class="num-card__v"><span data-count="15">15</span><small>s Takt</small></p><p>11 Sekunden Licht, 4 Sekunden Dunkel – gemessen wird nur in der Pause.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec rounded-top" data-theme="light" aria-labelledby="film-mb-h">
+      <div class="wrap">
+        <header class="sec-head sec-head--row">
+          <div>
+            <p class="kicker" data-reveal>In Bewegung</p>
+            <h2 class="h2" id="film-mb-h" data-reveal>Auseinandergenommen und eingeschaltet</h2>
+          </div>
+          <p class="lead" data-reveal>Aus unserem Intro-Film, gerendert aus den echten Druckdateien: links der Zusammenbau aller Bauteile, rechts die Küvette im Zeitraffer – unter rotem Licht bleicht das Methylenblau aus.</p>
+        </header>
+        <div class="cards cards--2">
+          <figure class="card card--img" data-reveal>
+            <div class="card__media" style="aspect-ratio: 16 / 9; position: relative"><video data-auto data-src-lg="assets/video/messbox-zusammenbau.mp4" poster="assets/video/messbox-zusammenbau-poster.webp" muted playsinline loop preload="none" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></video></div>
+            <figcaption class="card__in"><p class="card__n">Zusammenbau</p><h3 class="h3">Jedes Teil an seinem Platz</h3><p>Sockel mit Schublade, Kammer, Adapterplatte auf dem Spektrometer, Schienen für den Lichtkopf.</p></figcaption>
+          </figure>
+          <figure class="card card--img" data-reveal style="--d: 80ms">
+            <div class="card__media" style="aspect-ratio: 16 / 9; position: relative"><video data-auto data-src-lg="assets/video/kuevette-bleicht.mp4" poster="assets/video/kuevette-bleicht-poster.webp" muted playsinline loop preload="none" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></video></div>
+            <figcaption class="card__in"><p class="card__n">Nahaufnahme</p><h3 class="h3">Die Probe bleicht aus</h3><p>Die LED strahlt von oben in die Küvette, das Spektrometer misst quer dazu – im Takt, nur in der Dunkelpause.</p></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec rounded-top" data-theme="dark" aria-labelledby="daten-h">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="kicker" data-reveal>Technische Daten</p>
+          <h2 class="h2" id="daten-h" data-reveal>Messbox v4.1</h2>
+          <p class="lead" data-reveal>Geräte und Kabel sind im 3D-Modell vereinfacht dargestellt. Die Vernier-Geräte sind geliehen und werden nicht verändert.</p>
+        </header>
+        <dl class="specs" data-reveal>
+          <div><dt>Innenmaß</dt><dd>190 × 135 × 140 mm</dd></div>
+          <div><dt>Druckteile</dt><dd>25 Teile, zusammen ca. 860 g</dd></div>
+          <div><dt>Licht</dt><dd>4 LED-Module à 3 W: 660, 590, 480 und 450 nm</dd></div>
+          <div><dt>Treiber</dt><dd>LDD-350L, 350 mA, geschaltet über MOSFET IRLZ44N</dd></div>
+          <div><dt>Steuerung</dt><dd>ESP32, außerhalb der Kammer</dd></div>
+          <div><dt>Spektrometer</dt><dd>Vernier Go Direct SpectroVis Plus, 380–950 nm <a class="ref" href="quellen.html#q15">[15]</a></dd></div>
+          <div><dt>Geometrie</dt><dd>Licht von oben, Messung quer dazu (90°), während der Bestrahlung</dd></div>
+          <div><dt>Lichttakt</dt><dd>15 s: 11 s an, 4 s aus – gemessen wird im Dunkeln</dd></div>
+          <div><dt>Kontrollen</dt><dd>Zwillingsküvette mit Fühler (±0,2 °C), Klimasensor BME280</dd></div>
+          <div><dt>Passung</dt><dd>3 Passstifte Ø 4 mm, Spiel 0,30 mm – Test am 08.09.2026 bestanden</dd></div>
+          <div><dt>LED-Wechsel</dt><dd>Kopf 15 mm hoch, 75 mm zur Seite, ca. 29 s</dd></div>
+          <div><dt>Stand</dt><dd>Konstruktion v4.1 vom 21.09.2026 – jetzt wird vermessen, gedruckt und gebaut</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="gloss" id="g-esp" popover>
+      <p class="gloss__t">ESP32</p>
+      <p>Ein kleiner, günstiger Mikrocontroller – ein Mini-Computer auf einer Platine. Er schaltet die LEDs und gibt den Takt für die Messung vor.</p>
+      <button class="gloss__x" type="button" popovertarget="g-esp" popovertargetaction="hide" aria-label="Erklärung schließen">×</button>
+    </div>
+    <div class="gloss" id="g-kuevette" popover>
+      <p class="gloss__t">Küvette</p>
+      <p>Ein kleines, durchsichtiges Gefäß mit genau festgelegter Breite, in dem eine Lösung gemessen wird. Bei uns steckt sie mitten im Spektrometer.</p>
+      <button class="gloss__x" type="button" popovertarget="g-kuevette" popovertargetaction="hide" aria-label="Erklärung schließen">×</button>
+    </div>
+    <div class="gloss" id="g-spektro" popover>
+      <p class="gloss__t">Spektrometer</p>
+      <p>Ein Messgerät, das zeigt, wie viel Licht jeder Farbe durch eine Probe kommt. Daraus sehen wir, wie viel Farbstoff noch in der Lösung ist.</p>
+      <button class="gloss__x" type="button" popovertarget="g-spektro" popovertargetaction="hide" aria-label="Erklärung schließen">×</button>
+    </div>
+    <nav class="next" data-theme="dark" aria-label="Weiter">
+      <div class="wrap">
+        <a class="next__card" href="vorhersage.html">
+          <video data-auto data-src-lg="assets/video/led-farben.mp4" poster="assets/video/led-farben-poster.webp" muted playsinline loop preload="none" aria-hidden="true"></video>
+          <span class="next__in">
+            <span><span class="kicker" style="color: #c6cfe1">Weiter · 04 Vorhersage</span><span class="next__title">Vier Farben, eine Vorhersage</span><span class="next__text">Selbst ausprobieren: Wellenlänge am Regler wählen – die Formeln rechnen live mit.</span></span>
+            <span class="next__go" aria-hidden="true">→</span>
+          </span>
+        </a>
+        <a class="next__back" href="wissen.html">← Zurück zu 02 Wissen</a>
+      </div>
+    </nav>
+  </main>
+
+  <footer class="site-footer" data-theme="dark">
+    <div class="wrap">
+      <p class="site-footer__big">Licht nutzen.<br /><span>Alterung vorhersagen.</span></p>
+      <div class="site-footer__grid">
+        <div>
+          <h4>AI-Photoguard</h4>
+          <p>Jugend forscht 2027 · Fachgebiet Chemie<br />Staatliche Fachoberschule Holzkirchen<br />Joshua · Max · Helena</p>
+        </div>
+        <div>
+          <h4>Projekt</h4>
+          <ul><li><a href="idee.html">Idee</a></li><li><a href="forschungsweg.html">Forschungsweg</a></li><li><a href="team.html">Team &amp; Stand</a></li><li><a href="index.html">Start</a></li></ul>
+        </div>
+        <div>
+          <h4>Wissen &amp; Technik</h4>
+          <ul><li><a href="wissen.html">Wissen</a></li><li><a href="messbox.html">Messbox in 3D</a></li><li><a href="vorhersage.html">Vorhersage</a></li><li><a href="anwendungen.html">Anwendungen</a></li></ul>
+        </div>
+        <div>
+          <h4>Mehr</h4>
+          <ul><li><a href="#film" data-film>Film ansehen</a></li><li><a href="quellen.html">Quellen &amp; Bildnachweis</a></li><li><a href="quellen.html#impressum">Impressum</a></li><li><a href="quellen.html#datenschutz">Datenschutz</a></li></ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom"><span>Keine Cookies · kein Tracking · keine fremden Server</span><span>Stand: 10. Oktober 2026</span></div>
+    </div>
+  </footer>
+
+  <dialog class="film" id="film" aria-label="Film: AI-Photoguard in 90 Sekunden">
+    <video controls playsinline preload="none" poster="assets/video/film-poster.webp" data-src="assets/video/film-ai-photoguard.mp4"></video>
+    <div class="film__bar"><span>AI-Photoguard · Flug durch die Messbox · 1:30 · mit Ton</span><button class="film__x" type="button" data-film-close aria-label="Film schließen">×</button></div>
+  </dialog>
+</div>
+<script src="assets/js/uebergaenge.js?v=6.1" defer></script>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
+<script src="assets/js/site.js?v=6.1" defer></script>
+<script src="assets/js/messbox.js?v=6.1" defer></script>
+</body>
+</html>

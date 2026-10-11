@@ -1,0 +1,49 @@
+/* Rundgang durch die Messbox – Bildfolge, die beim Scrollen abgespielt wird */
+
+.rg-start { position: relative; min-height: 100vh; min-height: 100svh; display: grid; align-items: end; overflow: hidden; background: var(--nacht); }
+.rg-start__bild { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .55; }
+.rg-start::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,8,11,.35) 0%, rgba(7,8,11,.2) 40%, var(--nacht) 100%); }
+.rg-start__text { position: relative; z-index: 1; padding-block: 0 clamp(56px, 9vw, 120px); }
+.rg-start__titel { font-size: clamp(48px, 9vw, 150px); line-height: .95; letter-spacing: -.045em; font-weight: 650; margin: 0 0 24px; }
+.rg-laden { margin-top: 26px; font-size: 13.5px; font-weight: 600; color: var(--grau-d); font-variant-numeric: tabular-nums; }
+
+/* Die Bühne bleibt stehen, während man durch die hohe Abschnittsfläche scrollt */
+.rg { position: relative; height: 1500vh; background: var(--nacht); }
+.rg__buehne { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
+.rg__bild { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.rg__schleier { position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(90deg, rgba(7,8,11,.78) 0%, rgba(7,8,11,.35) 34%, rgba(7,8,11,0) 58%),
+              linear-gradient(0deg, rgba(7,8,11,.6) 0%, rgba(7,8,11,0) 30%); }
+
+.rg__stationen { position: absolute; left: var(--gutter); bottom: calc(86px + env(safe-area-inset-bottom, 0px)); width: min(440px, calc(100% - 2 * var(--gutter))); }
+.rg__karte { position: absolute; left: 0; bottom: 0; width: 100%; opacity: 0; transform: translateY(18px);
+  transition: opacity .55s ease, transform .7s var(--weich); pointer-events: none; }
+.rg__karte.da { opacity: 1; transform: none; pointer-events: auto; }
+.rg__nr { margin: 0 0 10px; font-size: 12.5px; font-weight: 700; letter-spacing: .14em; color: var(--rot); }
+.rg__karte h2 { margin: 0 0 14px; font-size: clamp(30px, 3.6vw, 52px); line-height: 1.02; letter-spacing: -.035em; font-weight: 650; text-wrap: balance; }
+.rg__karte p { margin: 0; font-size: clamp(16px, 1.25vw, 18.5px); line-height: 1.55; color: #dfe2e8; }
+.rg__chip { display: inline-block; margin-top: 16px !important; padding: 6px 12px; border-radius: 999px; font-size: 13px !important; font-weight: 650;
+  background: rgba(255, 255, 255, .1); color: #f1f2f5 !important; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+
+/* Fortschritt und Stationspunkte */
+.rg__leiste { position: absolute; left: var(--gutter); right: var(--gutter); bottom: calc(30px + env(safe-area-inset-bottom, 0px)); height: 2px; background: rgba(255,255,255,.16); border-radius: 2px; }
+.rg__fuellung { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--rot); border-radius: 2px; }
+.rg__punkte { position: absolute; left: var(--gutter); right: var(--gutter); bottom: calc(22px + env(safe-area-inset-bottom, 0px)); height: 18px; }
+.rg__punkte button { position: absolute; top: 0; width: 18px; height: 18px; margin-left: -9px; border-radius: 50%; padding: 0; }
+.rg__punkte button::before { content: ""; position: absolute; inset: 5px; border-radius: 50%; background: rgba(255,255,255,.4); transition: background .3s, transform .3s; }
+.rg__punkte button.da::before { background: var(--rot); transform: scale(1.35); }
+.rg__punkte button:hover::before { background: #fff; }
+.rg__punkte button span { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: 12px; font-weight: 650;
+  padding: 4px 9px; border-radius: 999px; background: rgba(7,8,11,.8); opacity: 0; transition: opacity .2s; pointer-events: none; }
+.rg__punkte button:hover span, .rg__punkte button:focus-visible span { opacity: 1; }
+
+.rg-ende__knoepfe { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Hochkant (Handy): Bild oben vollständig, Text darunter */
+@media (max-aspect-ratio: 1/1) {
+  .rg__schleier { background: linear-gradient(0deg, rgba(7,8,11,1) 0%, rgba(7,8,11,.92) 46%, rgba(7,8,11,0) 62%); }
+  .rg__stationen { bottom: calc(70px + env(safe-area-inset-bottom, 0px)); }
+  .rg__karte h2 { font-size: 30px; }
+  .rg__karte p { font-size: 15.5px; }
+}
+@media (prefers-reduced-motion: reduce) { .rg__karte { transition: opacity .2s; transform: none; } }

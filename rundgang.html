@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="de" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Durch die Messbox – AI-Photoguard</title>
+<meta name="description" content="Ein Flug durch die Messbox von AI-Photoguard: Lichtkopf, Küvette, Methylenblau-Molekül, Spektrometer, Kontrolle und Elektronik – gerendert in Blender aus den echten Druckdateien.">
+<meta name="theme-color" content="#07080b">
+<link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/v6.css?v=6.1">
+<link rel="stylesheet" href="assets/css/rundgang.css?v=6.1">
+</head>
+<body data-kopf="dunkel">
+
+<a class="nur-vorleser" href="#rundgang">Zum Rundgang springen</a>
+
+<header class="kopf voll" id="kopf">
+  <button class="kopf__knopf" id="menueKnopf" type="button" aria-expanded="false" aria-controls="menue"><span>Menü</span><i aria-hidden="true"></i></button>
+</header>
+
+<a class="marke klein" id="marke" href="index.html" aria-label="AI-Photoguard – Startseite">AI-Photo<span>guard</span></a>
+
+<nav class="menue" id="menue" aria-label="Hauptmenü" aria-hidden="true">
+  <ol>
+    <li><a href="index.html">Start <small>Die Übersicht</small></a></li>
+    <li><a href="idee.html">Idee <small>Fotosynthese als Vorbild</small></a></li>
+    <li><a href="wissen.html">Wissen <small>Methylenblau in 3D</small></a></li>
+    <li><a href="messbox.html">Messbox <small>3D-Rundgang, 8 Stationen</small></a></li>
+    <li><a href="rundgang.html" aria-current="page">Durch die Messbox <small>Test: Flug in 10 Stationen</small></a></li>
+    <li><a href="vorhersage.html">Vorhersage <small>Vier Farben → die fünfte</small></a></li>
+    <li><a href="anwendungen.html">Anwendungen <small>Wofür das zählt</small></a></li>
+    <li><a href="forschungsweg.html">Forschungsweg <small>Unsere Versuche 2025</small></a></li>
+    <li><a href="team.html">Team &amp; Stand <small>Wer wir sind</small></a></li>
+  </ol>
+</nav>
+
+<main>
+  <section class="rg-start" data-ton="dunkel" aria-labelledby="rg-h">
+    <img class="rg-start__bild" src="assets/rundgang/start.webp" alt="" width="1280" height="720">
+    <div class="wrap rg-start__text">
+      <p class="etikett">Test · Rundgang in zehn Stationen</p>
+      <h1 class="rg-start__titel" id="rg-h">Durch die Messbox.</h1>
+      <p class="lead">Ein Flug durch unser Messgerät – vom Deckel bis ins Methylenblau-Molekül und wieder hinaus. Gerendert in Blender aus unseren 28 echten Druckdateien. Scrolle, um hineinzufliegen.</p>
+      <p class="rg-laden" id="rgLaden" aria-live="polite">Bilder werden geladen …</p>
+    </div>
+  </section>
+
+  <section class="rg" id="rundgang" data-ton="dunkel" aria-label="Rundgang durch die Messbox">
+    <div class="rg__buehne">
+      <canvas class="rg__bild" id="rgBild" aria-hidden="true"></canvas>
+      <div class="rg__schleier" aria-hidden="true"></div>
+
+      <div class="rg__stationen">
+        <article class="rg__karte" data-von="0" data-bis="95">
+          <p class="rg__nr">01 / 10</p><h2>Die Messbox</h2>
+          <p>Eine Dunkelkammer aus dem 3D-Drucker, innen 19 × 13,5 × 14 cm. Schwarzes PLA mit 3 mm Wandstärke – dünneres lässt rotes Licht durch.</p>
+          <p class="rg__chip">28 Druckteile · Messbox v4.1</p>
+        </article>
+        <article class="rg__karte" data-von="95" data-bis="185">
+          <p class="rg__nr">02 / 10</p><h2>Die Wechselklappe</h2>
+          <p>Die einzige Öffnung im Deckel, 66 × 66 mm. Hier tauschen wir die LED-Module – und später schaut hier eine Wärmebildkamera hinein.</p>
+          <p class="rg__chip">Licht kommt nur herein, wenn wir es wollen</p>
+        </article>
+        <article class="rg__karte" data-von="185" data-bis="282">
+          <p class="rg__nr">03 / 10</p><h2>Der Lichtkopf</h2>
+          <p>Die LED sitzt auf einem Alu-Stern und strahlt durch eine 9 × 9 mm große Blende senkrecht nach unten. Der Kühlkörper führt die Wärme ab – er bestimmt sogar die Höhe der Kammer.</p>
+          <p class="rg__chip">660 nm · 3 W · 350 mA Konstantstrom</p>
+        </article>
+        <article class="rg__karte" data-von="282" data-bis="372">
+          <p class="rg__nr">04 / 10</p><h2>Die Küvette</h2>
+          <p>3,5 mL Methylenblau-Lösung, 1 cm Schichtdicke. Bei 660 nm schluckt der Farbstoff 97 % so viel Licht wie in seinem Maximum bei 664 nm.</p>
+          <p class="rg__chip">Rot trifft fast genau das Absorptionsmaximum</p>
+        </article>
+        <article class="rg__karte" data-von="372" data-bis="520">
+          <p class="rg__nr">05 / 10</p><h2>Im Molekül</h2>
+          <p>Ein Lichtteilchen regt ein Methylenblau-Molekül an. Es gibt die Energie an Sauerstoff weiter – reaktiver Singulett-Sauerstoff ¹O₂ entsteht. Der greift andere Farbstoffmoleküle an: Sie verlieren ihre Farbe, die Lösung bleicht aus.</p>
+          <p class="rg__chip">Molekül aus PubChem-Koordinaten (CID 4139)</p>
+        </article>
+        <article class="rg__karte" data-von="520" data-bis="600">
+          <p class="rg__nr">06 / 10</p><h2>Licht aus</h2>
+          <p>Alle 15 Sekunden: 11 s Licht, 4 s Dunkelheit. Gemessen wird nur in der Dunkelpause – sonst würde der Sensor das LED-Licht mitmessen.</p>
+          <p class="rg__chip">11 s an · 4 s aus</p>
+        </article>
+        <article class="rg__karte" data-von="600" data-bis="700">
+          <p class="rg__nr">07 / 10</p><h2>Der Messstrahl</h2>
+          <p>Quer zur LED schickt das Spektrometer weißes Licht durch die Probe. Ein Gitter fächert es in seine Farben auf, ein Zeilensensor misst jede Farbe einzeln. Wo Methylenblau schluckt, fehlt Licht – kommt mehr durch, ist die Probe ausgebleicht.</p>
+          <p class="rg__chip">90° zur LED · Innenleben vereinfacht dargestellt</p>
+        </article>
+        <article class="rg__karte" data-von="700" data-bis="782">
+          <p class="rg__nr">08 / 10</p><h2>Die Kontrolle</h2>
+          <p>Daneben steht eine Zwillingsküvette, die nie Licht abbekommt. Ein Fühler misst ihre Temperatur auf ±0,2 °C, der BME280 die Kammerluft. Ändert sich nur die bestrahlte Probe, war es das Licht.</p>
+          <p class="rg__chip">Chemische Dunkelkontrolle</p>
+        </article>
+        <article class="rg__karte" data-von="782" data-bis="882">
+          <p class="rg__nr">09 / 10</p><h2>Die Elektronik</h2>
+          <p>Sie sitzt außerhalb der Kammer – der ESP32 hat eine dauerleuchtende LED, und in einer Dunkelkammer ist jede LED Störlicht. Über einen MOSFET schaltet er die LED im 15-Sekunden-Takt.</p>
+          <p class="rg__chip">ESP32 · LDD-350L · IRLZ44N</p>
+        </article>
+        <article class="rg__karte" data-von="882" data-bis="1001">
+          <p class="rg__nr">10 / 10</p><h2>Vier Farben</h2>
+          <p>In der Schublade warten die anderen LED-Module: 590, 450 und 480 nm. Ein einziger Treiber versorgt alle vier – so fällt seine Toleranz als Fehlerquelle weg. Aus vier gemessenen Bleichraten soll unser Modell die fünfte Farbe vorhersagen.</p>
+          <p class="rg__chip">450 · 480 · 590 · 660 nm</p>
+        </article>
+      </div>
+
+      <div class="rg__leiste" aria-hidden="true"><span class="rg__fuellung" id="rgFuellung"></span></div>
+      <nav class="rg__punkte" id="rgPunkte" aria-label="Stationen"></nav>
+    </div>
+  </section>
+
+  <section class="sec sec--dunkel rg-ende" data-ton="dunkel">
+    <div class="wrap">
+      <p class="etikett">Weiter</p>
+      <h2 class="h2">Selbst drehen oder selbst vorhersagen.</h2>
+      <p class="lead">Den Rundgang hat Blender gerendert – 500 Einzelbilder aus unserem 3D-Modell, keine Fotos. Im interaktiven 3D-Modell kannst du die Box selbst drehen.</p>
+      <div class="rg-ende__knoepfe">
+        <a class="weiter" href="messbox.html">Messbox zum Drehen</a>
+        <a class="weiter" href="vorhersage.html">Vier Farben, eine Vorhersage</a>
+      </div>
+      <p class="quelle">3D-Modell: Messbox v4.1 aus unseren Druckdateien · gerendert mit Blender (EEVEE) · Licht und Holz: Poly Haven (CC0) · Methylenblau-Koordinaten: PubChem CID 4139 · Spektrometer-Innenleben vereinfacht.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss">
+  <div class="wrap">
+    <div class="fuss__oben">
+      <div><p class="fuss__marke">AI-Photo<span>guard</span></p><p>Jugend forscht 2027 · Fachgebiet Chemie</p></div>
+      <div><h4>Seiten</h4><ul><li><a href="index.html">Start</a></li><li><a href="messbox.html">Messbox</a></li><li><a href="vorhersage.html">Vorhersage</a></li></ul></div>
+      <div><h4>Mehr</h4><ul><li><a href="team.html">Team &amp; Stand</a></li><li><a href="quellen.html">Quellen &amp; Impressum</a></li></ul></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/v6.js?v=6.1"></script>
+<script src="assets/js/rundgang.js?v=6.1"></script>
+</body>
+</html>

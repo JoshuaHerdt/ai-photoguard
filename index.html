@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="de" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI-Photoguard – Wie lange hält ein Farbstoff Licht aus?</title>
+<meta name="description" content="Jugend forscht 2027, Chemie: Wir messen, wie schnell der Farbstoff Methylenblau unter vier LED-Farben ausbleicht – und sagen die fünfte vorher.">
+<meta name="theme-color" content="#07080b">
+<link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/v6.css?v=6.1">
+<link rel="stylesheet" href="assets/css/uebergaenge.css?v=6.1">
+</head>
+<body data-kopf="dunkel">
+
+<a class="nur-vorleser" href="#problem">Zum Inhalt springen</a>
+
+<header class="kopf" id="kopf">
+  <button class="kopf__knopf" id="menueKnopf" type="button" aria-expanded="false" aria-controls="menue"><span>Menü</span><i aria-hidden="true"></i></button>
+</header>
+
+<a class="marke" id="marke" href="#top" aria-label="AI-Photoguard – nach oben">AI-Photo<span>guard</span></a>
+
+<nav class="menue" id="menue" aria-label="Hauptmenü" aria-hidden="true">
+  <ol>
+    <li><a href="idee.html">Idee <small>Fotosynthese als Vorbild</small></a></li>
+    <li><a href="wissen.html">Wissen <small>Methylenblau in 3D</small></a></li>
+    <li><a href="messbox.html">Messbox <small>3D-Rundgang, 8 Stationen</small></a></li>
+    <li><a href="rundgang.html">Durch die Messbox <small>Test: Flug in 10 Stationen</small></a></li>
+    <li><a href="vorhersage.html">Vorhersage <small>Vier Farben → die fünfte</small></a></li>
+    <li><a href="anwendungen.html">Anwendungen <small>Wofür das zählt</small></a></li>
+    <li><a href="forschungsweg.html">Forschungsweg <small>Unsere Versuche 2025</small></a></li>
+    <li><a href="team.html">Team &amp; Stand <small>Wer wir sind</small></a></li>
+  </ol>
+</nav>
+
+<main id="top">
+
+  <!-- Intro: Film aus Blender (Messbox aus den echten Druckdateien) -->
+  <section class="hero" data-ton="dunkel" aria-label="Intro">
+    <video muted playsinline loop autoplay preload="auto" poster="assets/video/intro-poster.webp"
+           data-src-lg="assets/video/intro-1080.mp4" data-src-sm="assets/video/intro-720.mp4"
+           aria-label="Film: Die Messbox setzt sich aus ihren Druckteilen zusammen, eine rote LED geht an, dann bleicht blaue Lösung in einer Küvette aus."></video>
+    <div class="hero__dunkel" id="dunkel"></div>
+    <div class="hero__text" id="heroText">
+      <div>
+        <p class="etikett">Jugend forscht 2027 · Chemie · FOS Holzkirchen</p>
+        <p class="hero__claim">Wir sagen voraus, wie lange ein Farbstoff Licht aushält – bevor er ausbleicht.</p>
+      </div>
+      <div class="hero__hinweis" aria-hidden="true"><i></i>Scrollen</div>
+    </div>
+  </section>
+
+  <!-- Das Problem -->
+  <section class="sec sec--hell" data-ton="hell" id="problem">
+    <div class="wrap split">
+      <div>
+        <p class="etikett" data-zeigen>Das Problem</p>
+        <h2 class="h2" data-zeigen>Licht treibt Farbstoffe an. Und es zerstört sie.</h2>
+        <p class="lead" data-zeigen>Farbstoffe fangen Licht ein – in Farbstoff-Solarzellen, in Lichtreaktoren, in der Medizin. Doch dasselbe Licht greift die Moleküle an: Die Farbe bleicht aus, die Wirkung lässt nach. Bisher merkt man das erst, wenn es schon passiert ist.</p>
+      </div>
+      <figure class="medium" data-zeigen style="--v: 120ms">
+        <video muted playsinline loop autoplay preload="metadata" poster="assets/video/labor-blau-poster.webp"
+               data-src-lg="assets/video/labor-blau.mp4" aria-hidden="true"></video>
+        <figcaption>Blaue Lösung im Labor · Video: Jill Burrow / Pexels</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Die Natur macht es vor -->
+  <section class="vollbild" data-ton="dunkel" aria-labelledby="natur-h">
+    <video muted playsinline loop autoplay preload="metadata" poster="assets/video/natur-blaetter-poster.webp"
+           data-src-lg="assets/video/natur-blaetter.mp4" aria-hidden="true"></video>
+    <div class="vollbild__inhalt wrap">
+      <p class="etikett" data-zeigen>Die Natur macht es vor</p>
+      <h2 class="h2" id="natur-h" data-zeigen>Blätter bauen ihre Lichtfänger jeden Tag neu.</h2>
+      <p class="lead" data-zeigen>Bei starker Sonne nimmt eine Pflanze laufend beschädigte Teile ihres Fotosystems auseinander und ersetzt sie. Technische Farbstoffe können das nicht. Deshalb wollen wir wissen, wie lange sie durchhalten.</p>
+    </div>
+    <p class="quelle">Video: Ruslan Sikunov / Pexels</p>
+  </section>
+
+  <!-- Zum Ausprobieren: Foto-Blue-Bottle -->
+  <section class="sec sec--dunkel" data-ton="dunkel" id="ausprobieren" aria-labelledby="fbb-h">
+    <div class="wrap fbb">
+      <div class="fbb__buehne" data-zeigen>
+        <span class="fbb__strahl" aria-hidden="true"></span>
+        <span class="fbb__glimmen" aria-hidden="true"></span>
+        <div class="fbb__flasche" aria-hidden="true">
+          <svg viewBox="0 0 120 220">
+            <rect x="34" y="4" width="52" height="30" rx="5" fill="#1b1f2a" stroke="rgba(255,255,255,.25)"/>
+            <path d="M28 40 h64 v150 a14 14 0 0 1 -14 14 h-36 a14 14 0 0 1 -14 -14z" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.55)" stroke-width="2"/>
+            <path class="fbb__fl" d="M31 80 h58 v108 a12 12 0 0 1 -12 12 h-34 a12 12 0 0 1 -12 -12z"/>
+            <path d="M36 86 v96" stroke="rgba(255,255,255,.35)" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="fbb__zustand"><i></i><span>gelb · Ausgangszustand</span></p>
+      </div>
+      <div>
+        <p class="etikett" data-zeigen>Probier es aus</p>
+        <h2 class="h2" id="fbb-h" data-zeigen>Welches Licht färbt die Lösung blau?</h2>
+        <p class="lead" data-zeigen>Wähle aus, was wir 2025 mit der gelben Foto-Blue-Bottle-Lösung gemacht haben – das Fläschchen zeigt, was passiert.</p>
+        <div class="fbb__knoepfe" role="group" aria-label="Versuch wählen" data-zeigen>
+          <button type="button" data-fbb="weiss" style="--c: #ffffff" aria-pressed="false"><i></i>Weißes Licht</button>
+          <button type="button" data-fbb="blau" style="--c: #4d6bff" aria-pressed="false"><i></i>Blaues Licht</button>
+          <button type="button" data-fbb="gruen" style="--c: #2fd15a" aria-pressed="false"><i></i>Grünes Licht</button>
+          <button type="button" data-fbb="rot" style="--c: #ff3b2f" aria-pressed="false"><i></i>Rotes Licht</button>
+          <button type="button" data-fbb="hitze" style="--c: #ff9a3c" aria-pressed="false"><i></i>Erhitzen</button>
+          <button type="button" data-fbb="luft" style="--c: #c6cfe1" aria-pressed="false"><i></i>Luft</button>
+        </div>
+        <div class="fbb__text" aria-live="polite" data-zeigen><b>Noch nichts passiert.</b> Die Lösung aus EDTA, Proflavin und Ethylviologen ist gelb – die Farbe kommt vom Proflavin.</div>
+        <p class="quelle">Beobachtungen und Fotos aus unserer Jugend-forscht-Arbeit 2025; Versuchsidee nach M. Tausch (Chemie mit Licht, 2019).</p>
+      </div>
+    </div>
+
+    <div class="wrap echt2025" data-zeigen>
+      <p class="etikett">Echte Fotos aus unserem Versuch 2025 – antippen zum Vergleichen</p>
+      <div class="echt2025__reihe">
+        <button type="button" class="echt2025__bild" data-echt="start" aria-pressed="true"><img src="assets/img/fbb2025-gelb.webp" alt="Küvette mit der gelben Ausgangslösung" style="object-position: 50% 42%" loading="lazy" width="640" height="837"><span>Ausgangslösung</span></button>
+        <button type="button" class="echt2025__bild" data-echt="weiss" aria-pressed="false"><img src="assets/img/fbb2025-weiss.webp" alt="Fläschchen unter weißem Licht einer Taschenlampe" style="object-position: 18% 55%" loading="lazy" width="900" height="635"><span>Weißes Licht</span></button>
+        <button type="button" class="echt2025__bild" data-echt="blau" aria-pressed="false"><img src="assets/img/fbb2025-blaulicht.webp" alt="Fläschchen unter blauem Licht" style="object-position: 28% 55%" loading="lazy" width="900" height="635"><span>Blaues Licht</span></button>
+        <button type="button" class="echt2025__bild" data-echt="gruen" aria-pressed="false"><img src="assets/img/fbb2025-gruen.webp" alt="Fläschchen unter grünem Licht, Lösung bleibt gelb" style="object-position: 30% 55%" loading="lazy" width="900" height="512"><span>Grünes Licht</span></button>
+        <button type="button" class="echt2025__bild" data-echt="rot" aria-pressed="false"><img src="assets/img/fbb2025-rot.webp" alt="Fläschchen unter rotem Licht, Lösung bleibt gelb" style="object-position: 46% 55%" loading="lazy" width="900" height="512"><span>Rotes Licht</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Die Messbox -->
+  <section class="sec sec--hell" data-ton="hell" id="messbox" aria-labelledby="mb-h">
+    <div class="wrap">
+      <div class="kopfzeile">
+        <div>
+          <p class="etikett" data-zeigen>Unser Werkzeug</p>
+          <h2 class="h2" id="mb-h" data-zeigen>Eine Messbox, die Licht dosiert – und im Dunkeln misst.</h2>
+        </div>
+        <p class="lead" data-zeigen>In der Box steht eine Küvette mit Methylenblau. Eine LED bestrahlt sie von oben, ein Spektrometer misst quer dazu, wie viel Farbe noch übrig ist.</p>
+      </div>
+      <figure class="medium render" data-zeigen>
+        <img src="assets/img/messbox-render-leuchtet.webp" alt="3D-Bild der Messbox: schwarze, geöffnete Kammer, innen rot beleuchtet, der Deckel schwebt darüber" width="1500" height="1000" loading="lazy">
+        <figcaption>3D-Modell aus unseren 28 Druckdateien, gerendert in Blender</figcaption>
+      </figure>
+      <div class="fakten">
+        <div class="fakt" data-zeigen><b>4</b><p>LED-Farben: 450, 480, 590 und 660 nm. Bei 664 nm schluckt Methylenblau am stärksten.</p></div>
+        <div class="fakt" data-zeigen style="--v: 100ms"><b>11 + 4 s</b><p>Takt: 11 Sekunden Licht, 4 Sekunden Messen im Dunkeln – sonst misst der Sensor die LED mit.</p></div>
+        <div class="fakt" data-zeigen style="--v: 200ms"><b>90°</b><p>Licht von oben, Messstrahl quer. So sieht der Sensor die LED nicht direkt.</p></div>
+      </div>
+      <div class="messbox-unten">
+        <figure class="medium" data-zeigen>
+          <video muted playsinline loop autoplay preload="metadata" poster="assets/video/druck-poster.webp" data-src-lg="assets/video/druck.mp4" aria-hidden="true"></video>
+          <figcaption>Symbolvideo 3D-Druck · Borja Lopez / Pexels</figcaption>
+        </figure>
+        <div>
+          <h3 class="h3" data-zeigen>Selbst konstruiert, selbst gedruckt.</h3>
+          <p class="lead" data-zeigen>Die Kammer ist aus schwarzem PLA mit 3 mm Wandstärke – dünneres schwarzes PLA lässt rotes Licht durch. Die Elektronik sitzt außerhalb, denn in einer Dunkelkammer ist jede Status-LED eine Störlichtquelle.</p>
+          <a class="weiter" href="messbox.html" data-zeigen>3D-Rundgang durch die Messbox</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vorhersage: Spektrum zum Ziehen -->
+  <section class="sec sec--dunkel" data-ton="dunkel" id="vorhersage" aria-labelledby="vh-h">
+    <div class="wrap">
+      <div class="kopfzeile">
+        <div>
+          <p class="etikett" data-zeigen>Die Idee</p>
+          <h2 class="h2" id="vh-h" data-zeigen>Vier Farben messen. Die fünfte vorhersagen.</h2>
+        </div>
+        <p class="lead" data-zeigen>Zieh den Regler über das Spektrum: Die Kurve zeigt, wie viel Licht Methylenblau bei jeder Farbe schluckt. Unsere vier LEDs sind markiert.</p>
+      </div>
+      <div class="spek" id="spektrum" data-zeigen>
+        <div class="spek__kurve">
+          <svg viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true">
+            <path id="spekFlaeche" fill="rgba(255,255,255,.07)"/>
+            <path id="spekLinie" fill="none" stroke="#f5f6f8" stroke-width="2" vector-effect="non-scaling-stroke"/>
+          </svg>
+          <div class="spek__leds" aria-hidden="true"></div>
+          <span class="spek__punkt" id="spekPunkt" aria-hidden="true"></span>
+        </div>
+        <div class="spek__band" aria-hidden="true"></div>
+        <div class="spek__regler">
+          <input type="range" min="400" max="760" step="2" value="540" aria-label="Wellenlänge wählen">
+          <span class="spek__griff" aria-hidden="true"></span>
+        </div>
+        <div class="spek__skala" aria-hidden="true"><span style="left:0;transform:none">400 nm</span><span style="left:27.78%">500</span><span style="left:55.56%">600</span><span style="left:83.33%">700</span><span style="left:100%;transform:translateX(-100%)">760 nm</span></div>
+        <div class="spek__ausgabe" aria-live="polite">
+          <div class="spek__wert" id="spekWert"></div>
+          <p class="spek__satz" id="spekSatz"></p>
+        </div>
+      </div>
+      <p class="quelle">Absorptionsspektrum von Methylenblau in Wasser: S. Prahl, Oregon Medical Laser Center (<a href="https://omlc.org/spectra/mb/" rel="noopener">omlc.org/spectra/mb</a>).</p>
+      <a class="weiter" href="vorhersage.html" data-zeigen>So rechnet unser Modell</a>
+    </div>
+  </section>
+
+  <!-- Wofür das zählt -->
+  <section class="sec sec--hell" data-ton="hell" id="nutzen" aria-labelledby="nu-h">
+    <div class="wrap">
+      <div class="kopfzeile">
+        <div>
+          <p class="etikett" data-zeigen>Wofür das zählt</p>
+          <h2 class="h2" id="nu-h" data-zeigen>Überall, wo Farbstoffe mit Licht arbeiten.</h2>
+        </div>
+        <p class="lead" data-zeigen>Wer vorher weiß, wann ein Farbstoff nachlässt, kann ihn rechtzeitig tauschen – statt erst zu reagieren, wenn die Leistung schon fällt.</p>
+      </div>
+      <div class="karten">
+        <article class="karte" data-zeigen>
+          <figure class="medium">
+            <video muted playsinline loop autoplay preload="metadata" poster="assets/video/solar-poster.webp" data-src-lg="assets/video/solar.mp4" aria-hidden="true"></video>
+            <figcaption>Video: Giant Asparagus / Pexels</figcaption>
+          </figure>
+          <h3 class="h3">Wasserstoff aus Sonnenlicht</h3>
+          <p>Anlagen, die mit Licht und Farbstoffen Wasserstoff erzeugen sollen, müssen jahrelang laufen. Dafür braucht es Farbstoffe, deren Alterung man planen kann.</p>
+        </article>
+        <article class="karte" data-zeigen style="--v: 100ms">
+          <figure class="medium">
+            <img src="assets/img/foto-graetzelzelle.webp" alt="Farbstoff-Solarzelle (Grätzel-Zelle) mit rötlicher Farbstoffschicht" width="1400" height="1050" loading="lazy">
+            <figcaption>Foto: S. Spohner, D. Scherr / Wikimedia, gemeinfrei</figcaption>
+          </figure>
+          <h3 class="h3">Farbstoff-Solarzellen</h3>
+          <p>In Grätzel-Zellen fängt ein Farbstoff das Licht ein. Bleicht er aus, liefert die Zelle weniger Strom.</p>
+        </article>
+        <article class="karte" data-zeigen style="--v: 200ms">
+          <figure class="medium">
+            <img src="assets/img/foto-pdt-rotlicht.webp" alt="Photodynamische Therapie: Behandlung mit rotem Licht" width="1600" height="1066" loading="lazy">
+            <figcaption>Foto: John Crawford, National Cancer Institute, gemeinfrei</figcaption>
+          </figure>
+          <h3 class="h3">Medizin mit Licht</h3>
+          <p>Bei der photodynamischen Therapie wirken Farbstoffe wie Methylenblau zusammen mit rotem Licht gegen Keime. Auch hier zählt, wie lange der Farbstoff hält.</p>
+        </article>
+      </div>
+      <a class="weiter" href="anwendungen.html" data-zeigen>Alle Anwendungen</a>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="sec sec--dunkel" data-ton="dunkel" id="team" aria-labelledby="team-h">
+    <div class="wrap">
+      <p class="etikett" data-zeigen>Das Team</p>
+      <h2 class="h2" id="team-h" data-zeigen>Drei Köpfe, ein Fachgebiet: Chemie.</h2>
+      <div class="team">
+        <div class="person" data-zeigen><b>Joshua Herdt</b><p>Chemie, Elektronik und Messbox · Projektleitung</p></div>
+        <div class="person" data-zeigen style="--v: 100ms"><b>Maximilian Kraus</b><p>Informatik, Vorhersagemodell und Design</p></div>
+        <div class="person" data-zeigen style="--v: 200ms"><b>Helena Wieser</b><p>Medizin, Dokumentation und Quellen</p></div>
+      </div>
+      <p class="betreuung" data-zeigen>Staatliche Fachoberschule Holzkirchen · betreut von Stefanie Gerrer</p>
+      <a class="weiter" href="team.html" data-zeigen>Projektstand und Fragen</a>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss">
+  <div class="wrap">
+    <div class="fuss__oben">
+      <div>
+        <p class="fuss__marke">AI-Photo<span>guard</span></p>
+        <p>Jugend forscht 2027 · Fachgebiet Chemie</p>
+      </div>
+      <div>
+        <h4>Seiten</h4>
+        <ul>
+          <li><a href="idee.html">Idee</a></li>
+          <li><a href="wissen.html">Wissen</a></li>
+          <li><a href="messbox.html">Messbox</a></li>
+          <li><a href="vorhersage.html">Vorhersage</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mehr</h4>
+        <ul>
+          <li><a href="anwendungen.html">Anwendungen</a></li>
+          <li><a href="forschungsweg.html">Forschungsweg</a></li>
+          <li><a href="team.html">Team &amp; Stand</a></li>
+          <li><a href="quellen.html">Quellen &amp; Impressum</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="fuss__nachweis">Bildnachweis: Intro-Film eigenes 3D-Modell (Blender; Licht und Holz von Poly Haven, CC0). Videos von Pexels (freie Lizenz): Ruslan Sikunov, Jill Burrow, Borja Lopez, Giant Asparagus. Fotos der Foto-Blue-Bottle: eigene Aufnahmen 2025. Grätzel-Zelle: S. Spohner, D. Scherr (gemeinfrei); photodynamische Therapie: J. Crawford, National Cancer Institute (gemeinfrei).</p>
+  </div>
+</footer>
+
+<script src="assets/data/methylenblau.js?v=6.0"></script>
+<script src="assets/js/uebergaenge.js?v=6.1"></script>
+<script src="assets/js/v6.js?v=6.1"></script>
+</body>
+</html>
